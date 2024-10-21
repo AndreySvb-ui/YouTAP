@@ -1,0 +1,250 @@
+<!DOCTYPE html> 
+<html lang="uk"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <title>YouTube Clone</title> 
+    <style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f9f9f9; 
+        } 
+  
+        .container { 
+            display: flex; 
+            flex-direction: column; 
+            height: 100vh; 
+        } 
+      
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background-color: #ffffff; 
+            padding: 10px 20px; 
+            border-bottom: 1px solid #ddd; 
+        } 
+        header .left-section, header .right-section { 
+            display: flex; 
+            align-items: center; 
+        } 
+        header .left-section div { 
+            margin-right: 20px; 
+        } 
+        header input[type="text"] { 
+            width: 500px; 
+            padding: 8px; 
+            border: 1px solid #ddd; 
+            border-radius: 2px; 
+        } 
+        header .right-section div { 
+            margin-left: 15px; 
+        } 
+ 
+       
+        .content { 
+            display: flex; 
+            flex-grow: 1; 
+            overflow: hidden; 
+        } 
+ 
+         
+        .sidebar { 
+            display: flex; 
+            flex-direction: column; 
+            width: 240px; 
+            background-color: #ffffff; 
+            padding: 10px; 
+            border-right: 1px solid #ddd; 
+            height: 100%; 
+            overflow-y: auto; 
+        } 
+        .sidebar h4 { 
+            padding: 10px 0; 
+            font-size: 14px; 
+            color: #606060; 
+        } 
+        .sidebar div { 
+            display: flex; 
+            align-items: center; 
+            padding: 10px; 
+            font-size: 14px; 
+            cursor: pointer; 
+        } 
+        .sidebar div:hover { 
+            background-color: #f1f1f1; 
+        } 
+        .sidebar .icon { 
+            margin-right: 15px; 
+        } 
+         
+       
+        .main-content { 
+            display: flex; 
+            flex-direction: column; 
+            flex-grow: 1; 
+            overflow-y: auto; 
+            background-color: #f9f9f9; 
+        } 
+ 
+       
+        .main-content .categories { 
+            display: flex; 
+            justify-content: flex-start; 
+            background-color: white; 
+            padding: 10px 20px; 
+            border-bottom: 1px solid #ddd; 
+        } 
+        .main-content .categories div { 
+            margin-right: 20px; 
+            padding: 8px 16px; 
+            background-color: #f1f1f1; 
+            border-radius: 20px; 
+            font-size: 14px; 
+            cursor: pointer; 
+        } 
+        .main-content .categories div:hover { 
+            background-color: #e1e1e1; 
+        } 
+ 
+        
+        .content-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            padding: 20px; 
+        } 
+ 
+        .video-item { 
+            background-color: white; 
+            padding: 10px; 
+            border-radius: 4px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            cursor: pointer; 
+            transition: transform 0.2s ease-in-out; 
+        } 
+        .video-item:hover { 
+            transform: scale(1.05); 
+        } 
+        .video-item img { 
+            width: 100%; 
+            border-radius: 4px; 
+        } 
+        .video-item h4 { 
+            margin-top: 10px; 
+            font-size: 16px; 
+            color: #333; 
+        } 
+        .video-item p {
+            font-size: 14px; 
+            color: #666; 
+        } 
+        .logo{ 
+            width: 100px; 
+            margin-right: 20px; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="container"> 
+        <header> 
+            <div class="left-section"> 
+                <div class="icon">☰</div> 
+                <div>Premium</div> 
+            </div> 
+            <input type="text" placeholder="Пошук..."> 
+            <div class="right-section"> 
+                 <div><i class="fas fa-video"></i></div> 
+                 <div><i class="fas fa-th"></i></div> 
+                 <div><i class="fas fa-bell"></i></div> 
+                 <div><i class="fas fa-user-circle"></i></div> 
+</div> 
+        </header> 
+ 
+        <div class="content"> 
+            <div class="sidebar"> 
+                <div>🏠  Головна</div> 
+                <div>🎬  YouTube Shorts</div> 
+                <div>🔔 Підписки</div> 
+                <h4>Ви></h4> 
+                <div>📁 Ваш канал</div> 
+                <div>🕒 Історія</div> 
+                <div>📁 Ваші відео</div> 
+                <div>📁 Ваші відео</div> 
+                <div>> Завантаження </div> 
+                <h4>Підписки</h4> 
+                <div>👤 dutISgoodYT</div> 
+                <div>👤 aooaaooaoaaoa</div> 
+                <div>👤 ITproger</div> 
+            </div> 
+ 
+            <div class="main-content"> 
+                <div class="categories"> 
+                    <div>Усі</div> 
+                    <div>Ігри</div> 
+                    <div>Музика</div> 
+                    <div>Прямі трансляції</div> 
+                    <div>Новини</div> 
+                    <div>Пригодницький бойовик</div> 
+                    <div>Мистуцтва</div> 
+                    <div>Мультфільми</div> 
+                    <div>нещодавно завантажені</div> 
+                    <div>Ви дивилися</div> 
+                </div> 
+ 
+                <div class="content-grid"> 
+                    <a href="https://youtu.be/IJwqv_7RtQQ?si=dumTqO6zLyJ2u6Gj" class="video-item" target="_blank"> 
+                        <img src="1.png" alt="Видео 1"> 
+                        <h4>Адольф Гитлер - В каждом маленьком ребенке ( ai cover )</h4> 
+                         
+                    </a> 
+                    <a href="https://youtu.be/76wzB8-GB98?si=Fdi7kYBkalZWVvCv" class="video-item" target="_blank"> 
+                        <img src="2.png" alt="Видео 2"> 
+                        <h4>Гимн программистов</h4> 
+                         
+                    </a> 
+                    <a href="https://youtu.be/KiWVosYK0xk?si=psML5red9wuYPViM" class="video-item" target="_blank"> 
+                        <img src="3.png" alt="Видео 3"> 
+                        <h4>Плейлист шаурмы</h4> 
+                        
+                    </a> 
+                    <a href="https://youtu.be/YABn9fIEfqo?si=UXkqgsWH3dgSMstp" class="video-item" target="_blank"> 
+                        <img src="4.png" alt="Видео 4"> 
+                        <h4>Адольф Гитлер - Адольф Гитлер спешит на помощь (AI Cover)</h4> 
+                         
+                    </a> 
+                    <a href="https://youtu.be/bXzjbQlsQo0?si=UUy6PTKMOUgI876o" class="video-item" target="_blank"> 
+                        <img src="kaban3.png" alt="Видео 5"> 
+                        <h4>КАБАНЧИК</h4> 
+                        
+                    </a> 
+                    <a href="https://youtu.be/xGy_IiNLATc?si=rPHaVe1SIVeGDqkE" class="video-item" target="_blank"> 
+                        <img src="cts.png" alt="Видео 6"> 
+                        <h4>funny cats with single braincell</h4> 
+                        
+                    </a> 
+                    <a href="https://youtu.be/aPWOJb24Z-Y?si=6QLpVChpC-oV0mEb" class="video-item" target="_blank"> 
+                        <img src="7.png" alt="Видео 7"> 
+                        <h4>Мичманы и не мичманы... ц ц ц ц ц ц ц ц ц ц ц ц</h4> 
+                         
+                    </a> 
+                    <a href="https://youtu.be/UKrA8hv8dvE?si=njaw2Mokmfg914zN" class="video-item" targe
+
+t="_blank"> 
+                        <img src="8.png" alt="Видео 8"> 
+                        <h4>Soviet Union edit, but its fits the beat perfectly (full version)</h4> 
+                       
+                     
+                    </a> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+</body> 
+</html>
